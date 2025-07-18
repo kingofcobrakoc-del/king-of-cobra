@@ -9,7 +9,7 @@ document.getElementById('coin-price').textContent = '$0.00 (Placeholder)';
 /*
 async function fetchCoinPrice() {
     try {
-        const response = await fetch('https://api.geckoterminal.com/api/v2/networks/solana/pools/solana_87n4vtsy5CN7EzpFeeD25YtGfyJpUbqwDZtAzNFnNtRZ');
+        const response = await fetch('https://api.geckoterminal.com/api/v2/networks/solana/pools/solana_8co1kMWvWwQdJWaUf8st1jdqkVpTyqHYgGC5CBNmpump');
         const data = await response.json();
         const price = data.data.attributes.base_token_price_usd;
         document.getElementById('coin-price').textContent = $${parseFloat(price).toFixed(2)};
