@@ -9,10 +9,10 @@ document.getElementById('coin-price').textContent = '$0.00 (Placeholder)';
 /*
 async function fetchCoinPrice() {
     try {
-        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const response = await fetch('https://api.geckoterminal.com/api/v2/networks/solana/pools/8co1kMWvWwQdJWaUf8st1jdqkVpTyqHYgGC5CBNmpump');
         const data = await response.json();
-        const price = data.bitcoin.usd;
-        document.getElementById('coin-price').textContent = $${price.toFixed(2)};
+        const price = data.data.attributes.base_token_price_usd;
+        document.getElementById('coin-price').textContent = $${parseFloat(price).toFixed(2)};
     } catch (error) {
         console.error('Error fetching price:', error);
         document.getElementById('coin-price').textContent = 'Error loading price';
